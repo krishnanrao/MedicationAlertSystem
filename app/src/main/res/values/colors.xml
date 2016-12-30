@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1d98f1</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#1d98f1</color>
+    <color name="apnacareBlue">#1d98f1</color>
+    <color name="apnacareDarkBlue">#1d98f1</color>
+    <color name="colorLoginText">#FFF</color>
+    <color name="colorGreen">#07ba04</color>
+    <color name="colorWhite">#fff</color>
+    <color name="secondary_text">#c5c5c5</color>
+    <color name="black">#424242</color>
+    <color name="line">#BDBDBD</color>
+
+
+</resources>

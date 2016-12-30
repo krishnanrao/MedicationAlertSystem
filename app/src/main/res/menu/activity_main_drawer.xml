@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/menu_medicine"
+            android:icon="@drawable/ic_add"
+            android:title="Medicines List" />
+
+        <item
+            android:id="@+id/menu_doctors"
+            android:icon="@drawable/ic_add"
+            android:title="Doctor Details" />
+
+        <item
+            android:id="@+id/menu_pharmacy"
+            android:icon="@drawable/ic_add"
+            android:title="Pharmacy Details" />
+
+        <item
+            android:id="@+id/menu_care_taker"
+            android:icon="@drawable/ic_add"
+            android:title="Family" />
+
+        <item
+            android:id="@+id/user_menu"
+            android:icon="@drawable/ic_add"
+            android:title="Update Profile" />
+        <item
+            android:id="@+id/faq_menu"
+            android:icon="@drawable/ic_add"
+            android:title="FAQ" />
+     </group>
+
+</menu>

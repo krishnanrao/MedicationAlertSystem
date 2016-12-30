@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">Smart Pill Reminder</string>
+
+    <!-- Strings related to login -->
+    <string name="empty_data">Click to add Medication</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">AfterNoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="med_dosage">Dosage</string>
+    <string name="med_qty">Prescribed For (Days)</string>
+    <string name="min_qty">Quantity(Purchased)</string>
+    <string name="max_qty">Quantity(Prescribed)</string>
+    <string name="login_button">Sign Up</string>
+    <string name="logo_image">LOGO</string>
+    <string name="birthday">Select your birthday</string>
+    <string name="optional">Optional Doctor Details</string>
+    <string name="pharmacy_refill_string">Please enter phone number and email id of your pharmacy for prescription delivery.</string>
+    <string-array name="quantityItems">
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+
+    <string-array name="morningTimes">
+        <item>N/A</item>
+        <item>6:00</item>
+        <item>6:15</item>
+        <item>6:30</item>
+        <item>6:45</item>
+        <item>7:00</item>
+        <item>7:15</item>
+        <item>7:30</item>
+        <item>7:45</item>
+        <item>8:00</item>
+        <item>8:15</item>
+        <item>8:30</item>
+        <item>8:45</item>
+        <item>9:00</item>
+        <item>9:15</item>
+        <item>9:30</item>
+        <item>9:45</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+    </string-array>
+    <string-array name="noonTimes">
+        <item>N/A</item>
+        <item>12:00</item>
+        <item>12:15</item>
+        <item>12:30</item>
+        <item>12:45</item>
+        <item>1:00</item>
+        <item>1:15</item>
+        <item>1:30</item>
+        <item>1:45</item>
+        <item>2:00</item>
+        <item>2:15</item>
+        <item>2:30</item>
+        <item>2:45</item>
+        <item>3:00</item>
+        <item>3:15</item>
+        <item>3:30</item>
+        <item>3:50</item>
+        <item>3:53</item>
+        <item>3:55</item>
+        <item>3:56</item>
+        <item>3:45</item>
+    </string-array>
+    <string-array name="evenTimes">
+        <item>N/A</item>
+        <item>4:08</item>
+        <item>4:10</item>
+        <item>4:12</item>
+        <item>4:45</item>
+        <item>5:00</item>
+        <item>5:15</item>
+        <item>5:30</item>
+        <item>5:45</item>
+        <item>6:00</item>
+        <item>6:15</item>
+        <item>6:30</item>
+        <item>6:45</item>
+        <item>7:00</item>
+        <item>7:15</item>
+        <item>7:30</item>
+        <item>7:45</item>
+
+    </string-array>
+    <string-array name="nightTimes">
+        <item>N/A</item>
+        <item>8:00</item>
+        <item>8:15</item>
+        <item>8:30</item>
+        <item>8:45</item>
+        <item>9:00</item>
+        <item>9:15</item>
+        <item>9:30</item>
+        <item>9:45</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+    </string-array>
+    <string-array name="dosageItems">
+        <item>MG</item>
+        <item>ML</item>
+
+    </string-array>
+    <string name="navigation_drawer_open"></string>
+    <string name="navigation_drawer_close"></string>
+    <string name="pharma_name">Pharmacy</string>
+    <string name="loading">Loading</string>
+    <string name="doc_name">Doctor</string>
+    <string name="medUpdateButton">Update Medication</string>
+    <string name="savePharma">Save Details</string>
+    <string name="editpharma">Update Details</string>
+
+    <string name="photo">Click To Capture Prescription</string>
+    <string name="sendPrescription">Click To Email Prescription</string>
+    <string name="docAddButton">Save Doctor Details</string>
+
+
+    <string name="family_module_title">Please enter the details of your loved one we will keep them updated about your medication intake status</string>
+    <string name="family_member_name">Name </string>
+    <string name="family_member_email">Email ID </string>
+    <string name="family_member_phone">Phone </string>
+    <string name="family_member_relation">Relation </string>
+    <string name="place_details">
+    <![CDATA[
+        <b>%1$s</b>
+        <br/>
+        <i>Place Id: %2$s</i>
+        <br/>
+        Address: %3$s
+        <br/>
+        Phone: %4$s
+        <br/>
+        Website: %5$s
+    ]]>
+    </string>
+    <string-array name="memberRelation">
+        <item>Spouse</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Care Taker</item>
+    </string-array>
+    <string-array name="month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="OddDates">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+    <string name="memAdd">Add Kin Details</string>
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+</resources>

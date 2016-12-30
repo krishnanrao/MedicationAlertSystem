@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1020488215548",
+    "firebase_url": "https://smatpillreminder.firebaseio.com",
+    "project_id": "smatpillreminder",
+    "storage_bucket": "smatpillreminder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020488215548:android:3413fe57c8c5d498",
+        "android_client_info": {
+          "package_name": "in.apnacare.android.medicationalertsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020488215548-kqjp03oi45qpbv0n6gn1i34rqpeb85id.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.apnacare.android.medicationalertsystem",
+            "certificate_hash": "1198A939A1D8DC43416BF66D39A0B9646AF7DF52"
+          }
+        },
+        {
+          "client_id": "1020488215548-sltvremfm0ufldnm515puked7k3mp4sn.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1020488215548-fv37a8k2scv0lnumdsf9glj4nihks2a1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwyyMmQUXmwXrDJPnThQHBgibE-ZSG0wo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020488215548-sltvremfm0ufldnm515puked7k3mp4sn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

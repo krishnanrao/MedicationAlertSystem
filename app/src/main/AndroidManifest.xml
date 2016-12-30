@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.apnacare.android.medicationalertsystem">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".utils.MedicationUsers"
+        android:allowBackup="true"
+        android:icon="@drawable/icon96"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA3c-GDC1C-BpQLKMdr-LA5PYKu3mW32SQ" />
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ViewMedicationActivity" />
+        <activity
+            android:name=".activity.MedicationDetailsActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AddMedication"
+            android:label="Add Medicine"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.MedicationDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.EditMedicationActivity"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.MedicationDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.PharmacyDetailsActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.MedicationDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityPharmacyModule"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.PharmacyDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityEditPharmacy"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.PharmacyDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityDoctorDetails"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityDoctorModule"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ActivityDoctorDetails" />
+        </activity>
+        <activity
+            android:name=".activity.ActivityDoctorEdit"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ActivityDoctorDetails" />
+        </activity>
+        <activity android:name=".activity.ActivityPrescription">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.PharmacyDetailsActivity" />
+        </activity>
+
+        <service android:name=".activity.RingtoneServices" />
+        <!--
+            <service
+            android:name=".Services.AlarmService"
+            android:enabled="true" />
+        -->
+
+        <receiver android:name=".Reciever.AlarmReciever" />
+        <receiver android:name=".activity.AlarmReciever" />
+        <receiver android:name=".Reciever.SampleAlarmReceiver" />
+        <receiver
+            android:name=".Reciever.SampleBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.AlarmActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+        <activity android:name=".activity.CareTakerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.CareTakerDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".activity.CareTakerDetailsActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+        <activity android:name=".activity.SplashScreen" />
+        <activity
+            android:name=".activity.CareTakerEditActivity"
+            android:noHistory="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.CareTakerDetailsActivity" />
+        </activity>
+        <activity android:name=".activity.LoginSuccess" />
+        <activity android:name=".alert.AlarmAlertActivity" />
+        <activity
+            android:name=".preferences.AlarmPreferencesActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.AlarmActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.AddMedication" />
+        </activity>
+
+        <receiver android:name=".activity.SampleBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Services.AlarmService"
+            android:enabled="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:process="za.co.neilson.alarm.serviceProcess" />
+        <service android:name=".Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Services.AlarmServiceBroadcastReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".alert.AlarmAlertBroadcastReciever" />
+        <receiver android:name=".telephony.PhoneStateChangedBroadcastReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.ManageUserActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+        <activity android:name=".activity.GooglePlaces" />
+        <activity android:name=".activity.GoogleLogin"></activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="678cea4e53ff099b0cfdc7b170590e5967e92cc0" />
+
+        <activity android:name=".activity.FaqActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity" />
+        </activity>
+    </application>
+
+</manifest>

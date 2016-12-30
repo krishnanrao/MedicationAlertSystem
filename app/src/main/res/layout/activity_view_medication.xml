@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".activity.ViewMedicationActivity">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteY="25dp"
+                tools:layout_editor_absoluteX="0dp"
+                >
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    android:indeterminateDrawable="@drawable/progress" >
+                </ProgressBar>
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    tools:context="in.apnacare.android.medicationalertsystem.activity.ViewMedicationActivity">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/current_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_gravity="center|center_horizontal|center_vertical"
+                                android:gravity="center|center_vertical|center_horizontal"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="16dp"
+                                android:ems="10" />
+                        </LinearLayout>
+
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   app:cardBackgroundColor="#F5F5F5"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="20dp"
+    android:id="@+id/mornMedCard"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sun_rise"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:typeface="sans"
+            android:text="@string/morning"
+            android:id="@+id/morTxt"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/line" />
+                                <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp">
+                                <TextView
+                                    android:id="@+id/mormedtxt"
+                                    android:layout_width="180dp"
+                                    android:text="@string/empty_data"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="@color/black" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/mormedtime"
+                                    android:layout_marginLeft="10dp"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textAlignment="center"
+                                     android:textColor="@color/black"
+                                    />
+                                    <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/mormedtaken"
+
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textAlignment="center"
+                                     android:textColor="@color/black"
+                                    />
+
+                                           </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+  <android.support.v7.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="#F5F5F5"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginBottom="20dp"
+      android:id="@+id/noonMedCard">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              >
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/sun_eve"
+                  android:layout_marginBottom="3dp"
+                  android:layout_marginTop="3dp"
+                  android:layout_marginLeft="10dp"
+                  android:paddingRight="10dp"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="15dp"
+                  android:text="@string/afternoon"
+                  android:typeface="sans"
+                  android:id="@+id/noonTxt"
+                  android:textAppearance="?android:attr/textAppearanceLarge" />
+          </LinearLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginBottom="5dp"
+              android:background="@color/line" />
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginLeft="10dp">
+
+              <TextView
+                  android:id="@+id/noonMedTxt"
+                  android:layout_width="180dp"
+                  android:layout_height="wrap_content"
+                  android:padding="5dp"
+                  android:text="@string/empty_data"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textColor="@color/black" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/noonmedtime"
+                  android:textAppearance="?android:textAppearanceMedium"
+                  android:layout_marginLeft="10dp"
+                  android:textColor="@color/black"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/noonmedtaken"
+
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textAlignment="center"
+                  android:textColor="@color/black"
+                  />
+          </LinearLayout>
+
+      </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#F5F5F5"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/evenMedCard">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    >
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/sun_set"
+                                        android:layout_marginBottom="3dp"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:paddingRight="10dp"/>
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="15dp"
+                                        android:id="@+id/evenTxt"
+                                        android:typeface="sans"
+                                        android:text="@string/evening"
+                                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                                </LinearLayout>
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/line" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginLeft="10dp">
+                                    <TextView
+                                        android:id="@+id/evenMedTxt"
+                                        android:layout_width="180dp"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:text="@string/empty_data"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/black" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/evenmedTime"
+                                        android:layout_marginLeft="10dp"
+                                        android:textAppearance="?android:textAppearanceMedium"
+                                        android:textColor="@color/black"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/evenmedtaken"
+
+                                        android:textAppearance="?android:attr/textAppearanceSmall"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/black"
+                                        />
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+                   </android.support.v7.widget.CardView>
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       app:cardBackgroundColor="#F5F5F5"
+                       android:layout_marginRight="10dp"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginBottom="20dp"
+                       android:id="@+id/nightMedCard">
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="horizontal"
+                            >
+
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@drawable/night"
+                                   android:layout_marginBottom="3dp"
+                                   android:layout_marginTop="3dp"
+                                   android:paddingRight="10dp"
+                                   android:layout_marginLeft="10dp"/>
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginBottom="10dp"
+                                   android:layout_marginTop="15dp"
+                                   android:ems="6"
+                                   android:text="@string/night"
+                                   android:typeface="sans"
+                                   android:id="@+id/nitTxt"
+                                   android:textAppearance="?android:attr/textAppearanceLarge" />
+                           </LinearLayout>
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="1dp"
+                               android:layout_marginBottom="5dp"
+                               android:background="@color/line" />
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="10dp">
+                               <TextView
+                                   android:id="@+id/nightMedTxt"
+                                   android:layout_width="180dp"
+                                   android:layout_height="wrap_content"
+                                   android:padding="5dp"
+                                   android:text="@string/empty_data"
+                                   android:textAppearance="?android:attr/textAppearanceMedium"
+                                   android:textColor="@color/black" />
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:id="@+id/nightmedTime"
+                                   android:textColor="@color/black"
+                                   android:textAppearance="?android:textAppearanceMedium"
+                                   android:layout_marginLeft="10dp"/>
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:id="@+id/nightmedtaken"
+
+                                   android:textAppearance="?android:attr/textAppearanceSmall"
+                                   android:textAlignment="center"
+                                   android:textColor="@color/black"
+                                   />
+
+                           </LinearLayout>
+                 </LinearLayout>
+
+
+             </android.support.v7.widget.CardView>
+
+                        <!-- <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#F5F5F5"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:id="@+id/simpleText">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp">
+                                <TextView
+                                    android:id="@+id/txt_push_message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="40dp"
+                                    android:gravity="center_horizontal"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="26dp" />
+
+                                <TextView
+                                    android:id="@+id/txt_reg_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true" />
+
+                            </LinearLayout>
+                  </LinearLayout>
+
+
+              </android.support.v7.widget.CardView>-->
+
+
+
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!--<android.support.design.widget.FloatingActionButton
+android:id="@+id/floatingAddActionButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentEnd="true"
+android:layout_gravity="bottom|end"
+android:layout_marginRight="20dp"
+android:layout_marginBottom="20dp"
+android:clickable="true"
+android:src="@drawable/ic_add"
+app:backgroundTint="@color/apnacareBlue"
+app:borderWidth="0dp"
+app:elevation="6dp"
+app:fabSize="normal"
+app:rippleColor="@color/colorWhite" />-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/navigation_view" />
+
+    </android.support.v4.widget.DrawerLayout>
